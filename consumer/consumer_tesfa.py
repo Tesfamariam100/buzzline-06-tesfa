@@ -1,6 +1,15 @@
 import json
 from kafka import KafkaConsumer
 from utils.logger import setup_logger
+import os
+from dotenv import load_dotenv
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'utils')))
+
+load_dotenv()  # Load environment variables from .env file
+
+KAFKA_BROKER = os.getenv("KAFKA_BROKER")
+KAFKA_TOPIC = os.getenv("KAFKA_TOPIC")
 
 logger = setup_logger(__name__)
 
