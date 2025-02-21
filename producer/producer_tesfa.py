@@ -3,6 +3,14 @@ import time
 from kafka import KafkaProducer
 from utils.logger import setup_logger  # Assuming you have a logger setup
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
+
+KAFKA_BROKER = os.getenv("KAFKA_BROKER")
+KAFKA_TOPIC = os.getenv("KAFKA_TOPIC")
+
 logger = setup_logger(__name__)
 
 def generate_reading():
