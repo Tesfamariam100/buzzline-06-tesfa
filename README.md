@@ -27,10 +27,10 @@ streaming-power-monitor/
 
 1. Clone the repository:
 
-'''python
+```python
 git clone https://github.com/Tesfamariam100/buzzline-06-tesfa.git
 cd buzzline-06-tesfa
-'''
+```
 
 2. Create and activate a virtual environment:
 
