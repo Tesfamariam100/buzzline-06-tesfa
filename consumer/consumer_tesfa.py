@@ -18,7 +18,7 @@ logger = setup_logger(__name__)
 
 # Initialize SQLite database
 def init_db():
-    conn = sqlite3.connect(DATABASE_PATH)
+    conn = sqlite3.connect('data/electricity_data.db')
     cursor = conn.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS electricity_usage (
