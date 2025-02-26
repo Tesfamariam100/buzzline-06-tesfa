@@ -37,6 +37,10 @@ init_db()
 def calculate_cost(power_usage_kwh, rate=0.15):
     return power_usage_kwh * rate
 
+
+# Connect to the database
+conn = sqlite3.connect('data/electricity_data.db') # the line you asked about goes here.
+cursor = conn.cursor()
 def process_message(message):
     try:
         data = json.loads(message.value.decode("utf-8"))
