@@ -21,6 +21,9 @@ streaming-power-monitor/
 ├── requirements.txt   # Python dependencies
 ├── .env              # Configuration settings
 └── README.md         # Project documentation
+├── electricity_data.db  # store your data
+├── test_kafka.py      # to test kafka connectivity 
+└── .env.example       # sample for email alert config
 ```
 
 ### Setup Instructions
@@ -91,7 +94,5 @@ db.insert(timestamp, power_usage)
 * 💰 Cost calculation based on live data
 * 🔄 Dynamic streaming with Kafka
 * Scalable consumer-producer architecture
-
-### Upcoming Plans 📅
 * 🚨 Add real-time alerts for abnormal power consumption.
 
