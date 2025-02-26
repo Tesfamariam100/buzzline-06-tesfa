@@ -70,6 +70,22 @@ python producer/producer_tesfa.py
 ```
 python consumer/consumer_tesfa.py
 ```
+### Real-time Visualization
+
+Use Matplotlib to create a dynamic chart, visualizing real-time power consumption from the `electricity_topic`.
+The consumer script updates the plot with incoming data, providing immediate visual feedback.
+
+```python
+# Example snippet from consumer.py
+ax.plot(x_data, y_data, marker='o', linestyle='-')
+```
+### Historical Data
+treamed data is stored in a database, enabling historical trend analysis, anomaly detection, and reporting.
+The consumer persists each data point.
+```
+# Example of database interaction (conceptual)
+db.insert(timestamp, power_usage)
+```
 ### Features
 * ⚡ Real-time power usage monitoring
 * 💰 Cost calculation based on live data
@@ -77,7 +93,5 @@ python consumer/consumer_tesfa.py
 * Scalable consumer-producer architecture
 
 ### Upcoming Plans 📅
-* 📊 Enhance data visualization with Matplotlib or a web dashboard.
-* Store streamed data in a database for historical analysis.
 * 🚨 Add real-time alerts for abnormal power consumption.
 
